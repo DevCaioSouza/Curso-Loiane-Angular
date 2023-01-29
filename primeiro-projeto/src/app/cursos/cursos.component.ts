@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  nomePortal: string;
+  cursos: string[] = ['Java', 'ExtJS', 'Angular'];
+  materias: string[] = ["Módulos", "Diretivas","Templates" , "Injeção de Dependência"];
+  diretivas: string[] = ["ngIf", "ngSwitch", "ngSwitchCase", "ngSwitchDefault", "ngFor", "ngClass", "ngStyle", "ng-content", "Diretivas de Atributo"]
+
+  constructor(){
+    this.nomePortal = 'http://loiane.training';
+  }
+
 }
