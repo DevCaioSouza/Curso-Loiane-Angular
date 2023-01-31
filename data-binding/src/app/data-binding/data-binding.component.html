@@ -1,0 +1,20 @@
+<section class="property-binding">
+
+    <article>
+        <h3>String Interpolation - Interpolação de String</h3>
+        <h3>String renderizada via interpolação: {{ url }}</h3>
+        <h3>Resultado de 1 + 1: {{ 1+1 }}</h3>
+        <h3>R. de 1+1 não é: {{1+1 + getValor()}}</h3>
+        <h3>Curso de Angular e se gosto do curso: {{cursoAngular && getCurtirCurso()}}</h3>
+    </article>
+
+    <article>
+        <h3>Interpolação & Property Binding</h3>
+        <img src="{{urlImage}}"><!-- Interpolação -->
+        <img [src]="urlImage"><!-- Property Binding -->
+        <img bind-src="urlImage">
+        <!-- Quando não existe uma propriedade no elemento, 
+        usa-se [attr.colspan] -->
+    </article>
+
+</section>
