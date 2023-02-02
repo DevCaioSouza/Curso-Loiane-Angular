@@ -30,30 +30,46 @@
             <br><br>
 
             <div class="alert {{ classe.value }}">Texto Colorido conforme valor do combobox</div>
-            <div class="alert" role="alert"
-            [class.alert-success]="classe.value == 'alert-success'">
+            <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
                 Sucesso
             </div>
-            <div class="alert" role="alert"
-            [class.alert-info]="classe.value == 'alert-info'">
+            <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
                 Info
             </div>
-            <div class="alert" role="alert"
-            [class.alert-warning]="classe.value == 'alert-warning'">
+            <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
                 Alerta
             </div>
-            <div class="alert" role="alert"
-            [class.alert-danger]="classe.value == 'alert-danger'">
+            <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
                 Erro
             </div>
 
             <div class="alert alert-danger" role="alert"
-            [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
                 Esse texto só aparece em caso de erro.
             </div>
 
-
         </div>
     </article>
+
+    <section class="event-binding">
+
+        <article>
+            <h1>EVENT BINDING - AULA #11</h1>
+            <div>
+                <button (click)="botaoClicado()"
+                class="btn btn-primary">Clique aqui</button>
+            </div> <br><br>
+
+            <input type="text"
+            (keyup)="onKeyUp($event)"
+            (keyup.enter)="salvarValor(campoInput.value)"
+            (blur)="salvarValor(campoInput.value)"
+            #campoInput >
+
+            <p>Valor Atual: {{valorAtual}}</p>
+            <p>Valor salvo: {{valorSalvo}}</p>
+        </article>
+
+    </section>
 
 </section>

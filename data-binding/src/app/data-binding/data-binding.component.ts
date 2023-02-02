@@ -11,12 +11,27 @@ export class DataBindingComponent {
   cursoAngular: boolean = true;
   urlImage: string = 'https://picsum.photos/id/237/200/300';
 
-  getValor():number{
+  valorAtual: string = '';
+  valorSalvo: string = '';
+
+  getValor(): number {
     return 1;
   }
 
-  getCurtirCurso(){
+  getCurtirCurso() {
     return true
+  }
+
+  botaoClicado() {
+    alert('Botão Clicado')
+  }
+
+  onKeyUp(evento: KeyboardEvent) {
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  salvarValor(valor: any) {
+    this.valorSalvo = valor;
   }
 
 }
