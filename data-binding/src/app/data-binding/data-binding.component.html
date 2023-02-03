@@ -10,11 +10,9 @@
 
     <article>
         <h3>Interpolação & Property Binding</h3>
-        <img src="{{urlImage}}"><!-- Interpolação -->
-        <img [src]="urlImage"><!-- Property Binding -->
+        <img src="{{urlImage}}">
+        <img [src]="urlImage">
         <img bind-src="urlImage">
-        <!-- Quando não existe uma propriedade no elemento, 
-        usa-se [attr.colspan] -->
     </article>
 
     <article>
@@ -67,7 +65,14 @@
             #campoInput >
 
             <p>Valor Atual: {{valorAtual}}</p>
-            <p>Valor salvo: {{valorSalvo}}</p>
+            <p>Valor salvo: {{valorSalvo}}</p><br><br>
+
+            <span
+            (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+            [class.highlight]="isMouseOver" >
+                Passe o mouse sobre mim
+            </span>
         </article>
 
     </section>
