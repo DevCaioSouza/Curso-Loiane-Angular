@@ -1,6 +1,6 @@
 <section class="property-binding">
 
-    <article>
+	<!-- <article>
         <h3>String Interpolation - Interpolação de String</h3>
         <h3>String renderizada via interpolação: {{ url }}</h3>
         <h3>Resultado de 1 + 1: {{ 1+1 }}</h3>
@@ -13,9 +13,9 @@
         <img src="{{urlImage}}">
         <img [src]="urlImage">
         <img bind-src="urlImage">
-    </article>
+    </article> -->
 
-    <article>
+	<!-- <article>
         <h3>Class & Style Binding</h3>
         <div>
             Selecione uma classe:
@@ -47,34 +47,37 @@
             </div>
 
         </div>
-    </article>
+    </article> -->
 
-    <section class="event-binding">
+	<section class="event-binding">
 
-        <article>
-            <h1>EVENT BINDING - AULA #11</h1>
-            <div>
-                <button (click)="botaoClicado()"
-                class="btn btn-primary">Clique aqui</button>
-            </div> <br><br>
+		<article>
+			<h1>Event Binding</h1>
 
-            <input type="text"
-            (keyup)="onKeyUp($event)"
-            (keyup.enter)="salvarValor(campoInput.value)"
+			<button class="btn btn-primary" (click)="onMouseClick()">Clique aqui</button>
+			<br><br>
+			<input type="text" 
+			(keyup)="onKeyUp($event)"
+			(keyup.enter)="salvarValor(campoInput.value)"
             (blur)="salvarValor(campoInput.value)"
-            #campoInput >
+            #campoInput
+            ><br>
 
-            <p>Valor Atual: {{valorAtual}}</p>
-            <p>Valor salvo: {{valorSalvo}}</p><br><br>
+			<span>
+                Valor Atual: {{ valorAtual }}<br>
+                Valor Salvo: {{ valorSalvo }}
+			</span>
 
+            <br><br>
             <span
             (mouseover)="onMouseOverOut()"
             (mouseout)="onMouseOverOut()"
-            [class.highlight]="isMouseOver" >
-                Passe o mouse sobre mim
-            </span>
-        </article>
+            [class.highlight]="isMouseOver"
+            >Passe o mouse sobre mim</span>
 
-    </section>
+
+		</article>
+
+	</section>
 
 </section>

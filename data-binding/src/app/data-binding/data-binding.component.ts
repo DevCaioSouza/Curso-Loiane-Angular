@@ -32,20 +32,20 @@ export class DataBindingComponent {
     return true
   }
 
-  botaoClicado() {
-    alert('Botão Clicado')
+  onMouseClick(){
+    alert('Event Binding do click funcionando')
   }
 
-  onKeyUp(evento: KeyboardEvent) {
-    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  onKeyUp(evento: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>evento.target).value
   }
 
-  salvarValor(valor: any) {
-    this.valorSalvo = valor;
+  salvarValor(valor: any){
+    this.valorSalvo = valor
   }
 
-  onMouseOverOut() {
-    this.isMouseOver = !this.isMouseOver;
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver
   }
 
 }
