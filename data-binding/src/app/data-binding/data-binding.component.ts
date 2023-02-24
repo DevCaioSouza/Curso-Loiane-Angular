@@ -31,6 +31,11 @@ export class DataBindingComponent {
     idade: 20
   }
 
+  nomeDoCurso: string = 'Angular';
+  nomeDoAluno: string = 'Caio';
+  nomeDoAnimal: string = 'Gato';
+  nomeDoPais: string = 'Bielorússia';
+
   getValor(): number {
     return 1;
   }
