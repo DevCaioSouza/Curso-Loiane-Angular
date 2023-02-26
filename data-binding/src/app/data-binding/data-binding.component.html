@@ -142,6 +142,11 @@
     
     ></app-curso>
 
+    <contador [valor]='valorInicial'
+    (mudouValor)="onMudouValor($event)"
+    ></contador>
+    <!-- mudouValor seria um evento customizado -->
+
   </article>
 
 </section>

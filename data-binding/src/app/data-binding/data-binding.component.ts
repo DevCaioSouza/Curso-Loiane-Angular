@@ -36,6 +36,8 @@ export class DataBindingComponent {
   nomeDoAnimal: string = 'Gato';
   nomeDoPais: string = 'Bielorússia';
 
+  valorInicial = 15;
+
   getValor(): number {
     return 1;
   }
@@ -58,6 +60,10 @@ export class DataBindingComponent {
 
   onMouseOverOut(){
     this.isMouseOver = !this.isMouseOver
+  }
+
+  onMudouValor(evento: any){
+    console.log(evento.novoValor)
   }
 
 }
