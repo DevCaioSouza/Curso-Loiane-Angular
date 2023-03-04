@@ -1,0 +1,41 @@
+<h5>
+  *ngIf<br>
+  A diretiva *ngIf é recomendada para árvores de elementos grandes
+</h5>
+
+<div>
+  Lista de cursos aqui
+</div>
+
+<div *ngIf="cursos.length == 0">
+  Não existem cursos para serem listados
+</div>
+<br>
+
+<div *ngIf="mostrarCursos">
+  <li>
+    {{cursos}}
+  </li>
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não existem cursos para serem exibidos
+</div>
+
+<br>
+<button (click)="onExibirCursos()">
+  Mostrar ou esconder cursos
+</button>
+
+<h5>Hidden como Alternativa<br>
+Hidden é recomendado para árvores de elementos pequenas</h5>
+
+<div [hidden]="!mostrarCursos">
+  <li>
+    {{cursos}}
+  </li>
+</div>
+
+<div [hidden]="mostrarCursos">
+  Não existem cursos para serem exibidos
+</div>
