@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgClassComponent {
 
+  meuFavorito: boolean = false;
+
+  onClickOnStar(){
+    this.meuFavorito = !this.meuFavorito
+  }
+
 }

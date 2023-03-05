@@ -1,1 +1,20 @@
-<p>diretiva-ng-class works!</p>
+<h1>
+  <h3>Estamos aqui utilizando "Class binding (property binding)"</h3>
+  <h4>Clique na estrela: </h4>
+  <i class="glyphicon" 
+  [class.glyphicon-star-empty]="!meuFavorito"
+  [class.glyphicon-star]="meuFavorito"
+  (click)="onClickOnStar()"
+  ></i>
+</h1>
+
+<h1>
+  <h3>Utilizando ngClass</h3>
+  <i class="glyphicon" 
+  [ngClass]="{
+    'glyphicon-star-empty': !meuFavorito,
+    'glyphicon-star': meuFavorito
+  }"
+  (click)="onClickOnStar()"
+  ></i>
+</h1>
