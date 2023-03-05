@@ -7,9 +7,7 @@
   Lista de cursos aqui
 </div>
 
-<div *ngIf="cursos.length == 0">
-  Não existem cursos para serem listados
-</div>
+
 <br>
 
 <div *ngIf="mostrarCursos">
@@ -27,8 +25,8 @@
   Mostrar ou esconder cursos
 </button>
 
-<h5>Hidden como Alternativa<br>
-Hidden é recomendado para árvores de elementos pequenas</h5>
+<h4>Hidden como Alternativa<br>
+Hidden é recomendado para árvores de elementos pequenas</h4>
 
 <div [hidden]="!mostrarCursos">
   <li>
@@ -38,4 +36,22 @@ Hidden é recomendado para árvores de elementos pequenas</h5>
 
 <div [hidden]="mostrarCursos">
   Não existem cursos para serem exibidos
+</div><br>
+
+----------------------------------------------- <br>
+
+<h2>Removendo o * e usando template 
+  (O que rola por debaixo dos panos no Angular?!)
+</h2>
+
+<!-- <div *ngIf="mostrarCursos">
+  
 </div>
+
+<template [ngIf]="mostrarCursos">
+  <div>Lista de cursos aqui</div>
+</template>
+
+<div template="ngIf mostrarCursos">
+
+</div> -->
