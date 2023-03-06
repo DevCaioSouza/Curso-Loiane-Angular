@@ -8,9 +8,30 @@ import { Component } from '@angular/core';
 export class DiretivaNgClassComponent {
 
   meuFavorito: boolean = false;
+  randomNumber: number = 0;
+  arrowDirection: string = "";
 
   onClickOnStar(){
     this.meuFavorito = !this.meuFavorito
+  }
+
+  onArrowClicked(){
+    
+    this.randomNumber = Math.floor((Math.random() * 4));
+    
+    console.log(this.randomNumber)
+
+    switch (this.randomNumber){
+      case 0: this.arrowDirection = "left";
+        break;
+      case 1: this.arrowDirection = "up";
+        break;
+      case 2: this.arrowDirection = "right";
+        break;
+      case 3: this.arrowDirection = "down";
+        break
+    }
+
   }
 
 }

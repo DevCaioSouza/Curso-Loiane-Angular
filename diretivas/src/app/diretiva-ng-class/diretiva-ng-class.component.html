@@ -18,3 +18,20 @@
   (click)="onClickOnStar()"
   ></i>
 </h1>
+
+<h4>Exercícios com ngClass: pondo em prática e revisando</h4>
+
+<h1>
+  <h3>Clique na seta para mudá-la de direção </h3>
+  <h4>Desafios <br> - Gerar um n° aleatório entre 0 e 3
+    <br> - Associar cada seta a um desses números  (ideia: if randomNumber = 0, arrowDirection = "seta tal")
+    <br> - (if randomNumber = 0, arrowDirection = right, algo assim)
+  </h4>
+  <i class="glyphicon"
+  (click)="onArrowClicked()"
+  >
+  {{randomNumber}}
+  {{arrowDirection}}
+  </i>
+</h1>
+
