@@ -9,7 +9,7 @@ export class DiretivaNgstyleComponent {
 
   ativo: boolean = false;
 
-  tamanhoFonte: number = 10
+  tamanhoFonte: number = 14;
 
   mudarAtivo(){
     this.ativo = !this.ativo;

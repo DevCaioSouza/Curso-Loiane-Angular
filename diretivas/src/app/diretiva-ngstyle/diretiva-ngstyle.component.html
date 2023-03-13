@@ -15,4 +15,20 @@
 <h5 
   [style.fontWeight]="'bold'"
 > Digite o tamanho da fonte que deseja usar no botão </h5>
-<input type="text" [(ngModel)]="tamanhoFonte" >
+<input type="text" [(ngModel)]="tamanhoFonte" > <br> <br>
+
+<h5
+[style.fontWeight]="'bold'"
+>Styles com a diretiva ngStyle</h5>
+
+<button
+  [ngStyle]="{
+    'backgroundColor': (ativo ? 'blue' : 'gray'),
+    'color': (ativo ? 'white' : 'black'),
+    'fontWeight': (ativo ? 'bold' : 'normal'),
+    'fontSize': (tamanhoFonte + 'px')
+  }"
+  (click)="mudarAtivo()"
+>
+  Clique para mudar os atributos com ngStyle
+</button>
