@@ -1,1 +1,18 @@
-<p>diretiva-ngstyle works!</p>
+<h5
+[style.fontWeight]="'bold'"
+>Styles com property binding (style binding)</h5>
+
+<button
+  [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontWeight]="ativo ? 'bold' : 'normal'"
+  [style.fontSize]="tamanhoFonte + 'px'"
+  (click)="mudarAtivo()"
+>
+  Clique para mudar os atributos do botão
+</button> <br><br>
+
+<h5 
+  [style.fontWeight]="'bold'"
+> Digite o tamanho da fonte que deseja usar no botão </h5>
+<input type="text" [(ngModel)]="tamanhoFonte" >

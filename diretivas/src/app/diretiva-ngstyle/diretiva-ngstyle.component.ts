@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgstyleComponent {
 
+  ativo: boolean = false;
+
+  tamanhoFonte: number = 10
+
+  mudarAtivo(){
+    this.ativo = !this.ativo;
+  }
 }
