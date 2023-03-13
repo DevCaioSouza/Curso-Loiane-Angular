@@ -26,8 +26,15 @@
   <h4>Desafios <br> - Gerar um n° aleatório entre 0 e 3
     <br> - Associar cada seta a um desses números  (ideia: if randomNumber = 0, arrowDirection = "seta tal")
     <br> - (if randomNumber = 0, arrowDirection = right, algo assim)
+    <br> - SOLUCIONADO utilizando switch 
   </h4>
   <i class="glyphicon"
+  [ngClass]="{
+    'glyphicon-arrow-left' : randomNumber,
+    'glyphicon-arrow-up' : randomNumber[1],
+    'glyphicon-arrow-right' : randomNumber[2],
+    'glyphicon-arrow-down' : randomNumber[3]
+  }"
   (click)="onArrowClicked()"
   >
   {{randomNumber}}

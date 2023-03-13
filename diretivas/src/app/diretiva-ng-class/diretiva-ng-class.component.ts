@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class DiretivaNgClassComponent {
 
   meuFavorito: boolean = false;
-  randomNumber: number = 0;
+  randomNumber: string = 'Clique para iniciar';
   arrowDirection: string = "";
 
   onClickOnStar(){
@@ -17,18 +17,18 @@ export class DiretivaNgClassComponent {
 
   onArrowClicked(){
     
-    this.randomNumber = Math.floor((Math.random() * 4));
+    this.randomNumber = Math.floor((Math.random() * 4)).toString()
     
     console.log(this.randomNumber)
 
     switch (this.randomNumber){
-      case 0: this.arrowDirection = "left";
+      case '0': this.arrowDirection = "left";
         break;
-      case 1: this.arrowDirection = "up";
+      case '1': this.arrowDirection = "up";
         break;
-      case 2: this.arrowDirection = "right";
+      case '2': this.arrowDirection = "right";
         break;
-      case 3: this.arrowDirection = "down";
+      case '3': this.arrowDirection = "down";
         break
     }
 
